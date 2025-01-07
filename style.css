@@ -1,10 +1,15 @@
 body{
     font-family: 'Open Sans', sans-serif;
     text-align: center;
+    margin: 0;
 }
 #hero {
     width:592px;
-    margin:auto;
+    margin: 0 auto 72px;
+
+}
+#hero img{
+    margin-bottom: 72px;
 }
 h1{
     border:1px solid black;
@@ -12,6 +17,8 @@ h1{
     font-size: 49px;
     line-height: 56px;
     font-weight: normal;
+
+    margin-bottom: 72px;
 }
 h1 span{
     font-weight: bold;
@@ -19,12 +26,24 @@ h1 span{
 span, a{
     color: #FF9900;
 }
-p{
+p, #footer{
     color:#7D7987;
     line-height: 28px;
     font-size: 14px;
     
 }
+
+#footer a + a{  /*a+a siginifica pegar o a anterior*/
+    margin-left:28px;
+}
+.line{
+    width: 568px;
+    height:0;
+    border-top: 1px solid #ECEFF2;
+    margin:0 auto 8px;
+
+}
+
 
 /*aula F026 11
 stage 02
