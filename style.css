@@ -44,6 +44,11 @@ p, #footer{
 
 }
 
+#balls{
+    position:fixed;
+    bottom:0px;
+    right: 0px;;
+}
 
 /*aula F026 11
 stage 02
