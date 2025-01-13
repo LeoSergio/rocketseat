@@ -30,6 +30,19 @@ ul li a:hover{
 h1,ul{
     font-family: 'Mulish', sans-serif;
 }
+main{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+section p{
+    font-size: 14px;
+    line-height: 28px;
+    color:#7d7987;
+    margin: 40px 0;
+}
 h1{
     font-size: 49px;
     line-height: 56px;
@@ -41,11 +54,7 @@ h1 span{
     color: #89c5cc;
     font-weight: bold;
 }
-section p{
-    font-size: 14px;
-    line-height: 28px;
-    color:#7d7987;
-}
+
 button{
     text-transform: uppercase;
     font-family: 'Open Sans',  sans-serif;
@@ -57,6 +66,8 @@ button a{
 footer{
     font-size: 14px;
     line-height: 28px;
+    text-align: center;
+    margin-top:80px;
 }
 footer a{
     font-weight: bold;
