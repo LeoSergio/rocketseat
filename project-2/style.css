@@ -1,11 +1,17 @@
 body{
     font-family: 'Open Sans',  sans-serif;
     margin:0;
+    background: linear-gradient(180deg, rgba(227, 255, 248, 0 )82.08%,
+     rgba(227, 255,248, 0.38)100%);
+     min-height:100vh;
+    
 }
 .page{
     width:1000px;
     padding: 8px;
-    margin:65px auto;
+    margin:0 auto;
+    padding-top: 65px;
+    
 }
 nav{
     display:flex;
@@ -23,9 +29,11 @@ ul{
 ul li a{
     text-decoration: none;
     color:#1F1534;
+    opacity: 0.5;
 }
 ul li a:hover{
     font-weight: bold;
+    opacity: 1;
 }
 h1,ul{
     font-family: 'Mulish', sans-serif;
@@ -93,7 +101,12 @@ footer a{
     color:#1F1534;
 
 }
+.page #balls{
+    position: fixed;
+    bottom:5px;
+    right:5px;
+}
 
 /*
-stage 02 aula F040
+land 03 aula F044
 */
