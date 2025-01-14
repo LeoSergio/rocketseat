@@ -13,9 +13,13 @@ body::before{
     z-index: -1;
     background: #121214;
 }
-header{
+.page{
     width:736px;
     margin:auto;
+}
+header{
+    width:319px;
+    margin-top:74px;
 }
 header h1{
     font-family: 'Archivo', sans-serif;
@@ -30,4 +34,11 @@ header p{
     font-size:16px;
     line-height:26px;
     color:#42d3ff;
+}
+
+form{
+    margin-top: 38px;
+    background:#fafafc;
+    min-height:300px;
+    border-radius: 8px;
 }
