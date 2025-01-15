@@ -1,7 +1,14 @@
-body{
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body, input, buttom, select, textarea{
     font-family: 'Poppins', sans-serif;
-    background: #e5e5e5;
 
+}
+body{
+    background: #e5e5e5;
 }
 body::before{
     content: '';
@@ -22,6 +29,7 @@ header{
     margin-top:74px;
 }
 header h1{
+    margin-bottom: 24px;
     font-family: 'Archivo', sans-serif;
     font-weight: bold;
     line-height: 36px;
@@ -56,6 +64,39 @@ form fieldset legend{
     border-bottom: 1px solid #e6e6f0;
     padding-bottom: 16px;
 
+}
 
+.input-wrapper{
+    display:flex;
+    flex-direction: column;
+}
 
+.input-wrapper label{
+    font-size: 14px;
+    line-height: 24px;
+    color:#4e4958;
+    margin-bottom: 8px;
+    padding-top: 16px;
+    
+}
+.input-wrapper label span{
+    margin-left: 12px;
+    font-size: 12px;
+    line-height: 20px;
+    color:#c1bccc;
+    
+    
+    
+}
+
+.input-wrapper input{
+    background: #fafafc;
+    border:1px solid #e6e6f0;
+    border-radius: 8px;
+    box-sizing: border-box;
+    height:56px;
+    padding: 0 24px;
+    font-size: 16px;
+    line-height: 26px;
+    color:#c1bccc;
 }
