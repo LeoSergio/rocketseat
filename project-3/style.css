@@ -95,7 +95,7 @@ form fieldset legend{
     
 }
 
-.input-wrapper input, .input-wrapper textarea{
+.input-wrapper input, .input-wrapper textarea, .input-wrapper select{
     background: #fafafc;
     border:1px solid #e6e6f0;
     border-radius: 8px;
@@ -109,4 +109,14 @@ form fieldset legend{
 .input-wrapper textarea{
     padding:0;
     height:168px;
+}
+
+.input-wrapper select{
+    appearance: none;
+    -webkit-appearance: none;
+    /*background-image: url(down-arrow.png) ;*/
+    background-repeat: no-repeat;
+    background-position: right top 50%;
+    
+
 }
