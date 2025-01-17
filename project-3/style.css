@@ -45,6 +45,9 @@ header p{
 }
 
 form{
+    display:flex;
+    flex-direction: column;
+    gap:48px;
     margin-top: 38px;
     background:#fafafc;
     min-height:300px;
@@ -117,6 +120,15 @@ form fieldset legend{
     /*background-image: url(down-arrow.png) ;*/
     background-repeat: no-repeat;
     background-position: right top 50%;
-    
 
+}
+
+.col-3{
+      display: flex;
+      gap:20px;
+
+}
+
+.col-3 > div:nth-child(1){
+    width:100%;
 }
