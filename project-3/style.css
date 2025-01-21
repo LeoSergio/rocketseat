@@ -174,3 +174,14 @@ form fieldset legend{
     outline:2px solid black;
     
 }
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+    background-color:green;
+    color:white;
+    width: 200px;
+
+}
