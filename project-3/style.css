@@ -9,6 +9,7 @@ body, input, buttom, select, textarea{
 }
 body{
     background: #e5e5e5;
+
 }
 body::before{
     content: '';
@@ -179,9 +180,12 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 10px;
+    width:80vw;
+    height:36px;
     margin:auto;
     background-color:green;
     color:white;
-    width: 200px;
+   
 
 }
