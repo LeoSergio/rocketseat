@@ -48,6 +48,7 @@ header p{
 form{
     display:flex;
     flex-direction: column;
+    justify-content: center;
     gap:48px;
     margin-top: 38px;
     background:#fafafc;
@@ -181,11 +182,13 @@ button{
     justify-content: center;
     align-items: center;
     border-radius: 10px;
+    border:none;
     width:80vw;
     height:36px;
     margin:auto;
     background-color:green;
     color:white;
+    font-weight: bold;
    
 
 }
