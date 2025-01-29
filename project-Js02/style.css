@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: rgb(1, 1, 75);
+    background-color:#040924;
     display:grid;
     place-items: center;
     height:100vh;
@@ -16,7 +16,7 @@ body{
     background-color: #ffffff;
     padding:2rem;
     margin-top:-12rem;
-    border-radius: 10px;
+    border-radius: 5px;
     
 }
 
@@ -24,17 +24,23 @@ form{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-    padding:1rem;
+    padding:1rem 0;
 }
 input{
     padding:1rem .7rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 2px;
     background-color: rgb(213, 217, 223);
 }
-
+label{
+    padding: .5rem 0;
+}
 button{
     margin-top:1rem;
+    padding:1rem 0;
+    background-color: rgb(67, 67, 149);
+    color:#ffffff;
+    font-weight: bold;
 }
 
+/*Aula 184 */
