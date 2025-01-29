@@ -36,29 +36,40 @@ body{
 
     box-shadow: 0 .2rem .4rem rgba(0, 0,0,0.1);    
 }
-
-form{
+h1{
+    color: var(--tt-heading);
+}
+form,.input-wrapper{
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding:1rem 0;
 }
-input{
+    
+.input-wrapper input{
     padding:1.6rem .7rem;
     border-radius: 2px;
-    background-color: rgb(213, 217, 223);
+    background-color:var(--bd-input);
     border:none;
+    color:var(--tt-input);
+    outline: var(--ot-input);
 }
-label{
-    
+::placeholder{
+    color:var(--tt-placeholder);
+}
+
+.input-wrapper label{
+    color:var(--tt-label);
     padding: .5rem 0;
 }
 button{
     margin-top:1rem;
     padding:1rem 0;
-    background-color: rgb(67, 67, 149);
-    color:#ffffff;
+    background-color:var(--bg-button);
+    color:var(--tt-button);
     font-weight: bold;
+    border:none; 
+    cursor: pointer;
 }
 
 /*Aula 184 */
