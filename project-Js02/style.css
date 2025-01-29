@@ -11,9 +11,11 @@
     --tt-input:#2112529; /*input*/
     --ot-input: #02799d; /*outline do input*/
     --bd-input: rgba(73,80,87, 0.3); /*border on input*/
+    --bg-input:#dce2e9;
     --tt-placeholder: rgba(73,80,87, 0.5);
     --bg-button: #02799d;
     --tt-button:#ffffff;
+    --bg-button-hover:#01475c;
 }
 body{
     font-family: 'Robot';
@@ -36,8 +38,10 @@ body{
 
     box-shadow: 0 .2rem .4rem rgba(0, 0,0,0.1);    
 }
-h1{
+.title{
     color: var(--tt-heading);
+    font-size: 3.2rem;
+    line-height: 4rem;
 }
 form,.input-wrapper{
     display: flex;
@@ -48,13 +52,15 @@ form,.input-wrapper{
     
 .input-wrapper input{
     padding:1.6rem .7rem;
-    border-radius: 2px;
-    background-color:var(--bd-input);
+    border-radius: .4rem;
+    background:var(--bg-input);
     border:none;
     color:var(--tt-input);
-    outline: var(--ot-input);
 }
-::placeholder{
+form input:focus{
+    outline: 2px solid var(--ot-input);
+}
+form input::placeholder{
     color:var(--tt-placeholder);
 }
 
@@ -64,12 +70,15 @@ form,.input-wrapper{
 }
 button{
     margin-top:1rem;
-    padding:1rem 0;
+    padding:1.6rem ;
     background-color:var(--bg-button);
     color:var(--tt-button);
     font-weight: bold;
     border:none; 
     cursor: pointer;
+    transition: background .3s;
 }
-
-/*Aula 184 */
+button:hover{
+    background: var(--bg-button-hover);
+}
+/*Aula 190 */
