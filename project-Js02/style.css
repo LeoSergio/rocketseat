@@ -81,4 +81,18 @@ button{
 button:hover{
     background: var(--bg-button-hover);
 }
+.resul{
+    width: 200px;
+    background-color: #ffffff;
+    border:1px solid red;
+}
+.alert{
+    padding:1rem;
+    border:1px solid red;
+    color:#000000;
+    font-weight: bolder;
+    text-align: center;
+    background-color: red;
+    display:none;
+}
 /*Aula 190 */
