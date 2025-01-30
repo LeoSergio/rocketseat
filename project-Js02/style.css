@@ -68,7 +68,7 @@ form input::placeholder{
     color:var(--tt-label);
     padding: .5rem 0;
 }
-button{
+form button{
     margin-top:1rem;
     padding:1.6rem ;
     background-color:var(--bg-button);
@@ -78,14 +78,10 @@ button{
     cursor: pointer;
     transition: background .3s;
 }
-button:hover{
+form button:hover{
     background: var(--bg-button-hover);
 }
-.resul{
-    width: 200px;
-    background-color: #ffffff;
-    border:1px solid red;
-}
+
 .alert{
     padding:1rem;
     border:1px solid red;
@@ -94,5 +90,42 @@ button:hover{
     text-align: center;
     background-color: red;
     display:none;
+}
+
+
+.modal-wrapper.open{
+    opacity: 1;
+    visibility: visible;
+}
+.modal-wrapper{
+    position: absolute;
+    inset:0; /*posicionar a caixa ao meio com o absolute*/
+    display:grid;
+    place-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0,0,0.7);
+
+}
+.modal{
+    position: relative;
+}
+.modal button{
+    background: none;
+    border:none;
+    position: absolute;
+    top:1.6rem;
+    right:1.6rem;
+
+    cursor:pointer;
+    transition: transform .3s;
+}
+
+.modal button:hover{
+    transform:scale(1.1);
+    border:1px solid black;
+    border-radius: 25%;
+    
 }
 /*Aula 190 */
