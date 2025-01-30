@@ -16,6 +16,8 @@
     --bg-button: #02799d;
     --tt-button:#ffffff;
     --bg-button-hover:#01475c;
+    --bg-error: red;
+    --tt-error:#ffffff;
 }
 body{
     font-family: 'Robot';
@@ -81,15 +83,29 @@ form button{
 form button:hover{
     background: var(--bg-button-hover);
 }
-
+.alert.open{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
 .alert{
     padding:1rem;
     border:1px solid red;
-    color:#000000;
-    font-weight: bolder;
+    color:var(--tt-error);
+    font-weight: bold;
     text-align: center;
-    background-color: red;
-    display:none;
+    background-color: var(--bg-error);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    visibility: hidden;
+    opacity: 0;
+    transform:translateY(-30px);
+    transition: transform .5s;
+    
 }
 
 
