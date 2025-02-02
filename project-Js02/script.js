@@ -2,11 +2,6 @@
 const form = document.querySelector('form');
 const inputPeso = document.querySelector('#kg');
 const inputCm = document.querySelector('#cm');
-/*
-const modalWrapper = document.querySelector('.modal-wrapper');
-const modalMessage = document.querySelector('.modal .title span');
-const modalBtnClose = document.querySelector('.modal button.close');
-*/
 
 //objetos literais, peguei as variaveis globais e coloquei dentro do
 //object
