@@ -20,3 +20,11 @@ Modal.buttonClose.onclick = () => {
     //modalWrapper.classList.remove('open');
     Modal.close();
 }
+
+//features de close com a tecla 'Esc'
+window.addEventListener('keydown', handleKeydown);
+function handleKeydown(event){
+    if (event.key === 'Escape'){
+        Modal.close();
+    }
+}
