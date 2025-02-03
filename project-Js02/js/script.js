@@ -1,7 +1,8 @@
 window.alert = function() {};  // Faz com que os alerts não façam nada
-
 import {Modal} from './modal.js'; //modularização
 import { AlertError } from './alert-error.js';
+import { notANumber,calculateIMC } from './utils.js';
+
 //variaveis globais
 const form = document.querySelector('form');
 const inputPeso = document.querySelector('#kg');
@@ -16,25 +17,27 @@ form.onsubmit = function(event){
     const peso = inputPeso.value;
     const cm = inputCm.value;
 
-    const showAlertErro = notANumber(peso) || notANumber(cm);
+    const wheightOrHeightnotANumber = notANumber(peso) || notANumber(cm);
 
-    if (showAlertErro){
+    if (wheightOrHeightnotANumber){
         AlertError.open()
         return;
+    }else{
+        AlertError.close();
     }
-    AlertError.close();
+    
+    const result = calculateIMC(peso,cm);
+    displayResultMessage(result);
+}
 
-    const result = IMC(peso,cm);
+function displayResultMessage(result){  
     const message = `Seu IMC é de ${result}`;
-
+    
     Modal.message.innerText = message
     //modalWrapper.classList.add('open');
     Modal.open();
-}
-function notANumber(value){
-    return isNaN(value) || value == "";
+
 }
 
-function IMC(peso,cm){
-    return(peso / ((cm /100) **2)).toFixed(2); // função que calcula o imc
-}
+
+
