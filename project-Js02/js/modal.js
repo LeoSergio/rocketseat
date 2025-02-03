@@ -1,5 +1,4 @@
-//objetos literais, peguei as variaveis globais e coloquei dentro do
-//object
+//objetos literais
 export const Modal = {
     wrapper: document.querySelector('.modal-wrapper'),
     message: document.querySelector('.modal .title span'),
@@ -14,7 +13,6 @@ export const Modal = {
     }
 
 }
-
 
 Modal.buttonClose.onclick = () => {
     //modalWrapper.classList.remove('open');

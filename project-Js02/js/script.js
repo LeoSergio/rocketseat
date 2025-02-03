@@ -18,14 +18,20 @@ form.onsubmit = function(event){
     const cm = inputCm.value;
 
     const wheightOrHeightnotANumber = notANumber(peso) || notANumber(cm);
-
+    //exibição da tela de erro, com validação
     if (wheightOrHeightnotANumber){
         AlertError.open()
+        inputPeso.addEventListener("input", function(){
+            AlertError.close()
+        })
+        inputCm.addEventListener("input", function(){
+        AlertError.close()
+    })
         return;
     }else{
         AlertError.close();
     }
-    
+
     const result = calculateIMC(peso,cm);
     displayResultMessage(result);
 }
@@ -38,6 +44,8 @@ function displayResultMessage(result){
     Modal.open();
 
 }
+
+//fechar a janela de erro ao digitar no campo
 
 
 
