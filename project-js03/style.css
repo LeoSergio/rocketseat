@@ -15,7 +15,7 @@
 body{
    background-color: var(--bg-body);
    color:var(--font-body-color);
-   /*font Roboto*/
+   font-family: 'Roboto', sans-serif;
 }
 
 button{
@@ -26,8 +26,8 @@ button{
 .hide{
    display:none;
 }
-.play img, .pause img, .sound-on img{
-   background-color: var(--primary-color);
+.play svg path, .pause svg path, .sound-on svg path{
+   fill: var(--primary-color);
 }
 #timer{
    font-size: 8.8rem;
@@ -37,8 +37,9 @@ button{
 
 #controls{
    background-color: var(--bg-primary-light);
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 9999px;
+   gap:1rem;
 }
-
-/*Proxima alteração é:
-converter as img para svg
-*/
