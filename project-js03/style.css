@@ -16,8 +16,15 @@ body{
    background-color: var(--bg-body);
    color:var(--font-body-color);
    font-family: 'Roboto', sans-serif;
-}
 
+   display: grid;
+   min-height: 100vh;
+   
+}
+main{
+   justify-self: center;
+   align-self: end;
+}
 button{
    background-color: transparent;
    border:none;
@@ -26,13 +33,17 @@ button{
 .hide{
    display:none;
 }
+button svg{
+   width: clamp(3.2rem , 2rem + 12vw, 6.4rem);
+}
 .play svg path, .pause svg path, .sound-on svg path{
    fill: var(--primary-color);
 }
 #timer{
-   font-size: 8.8rem;
+   font-size: clamp(4rem, 4rem + 10vw ,8.8rem);
    font-weight: bold;
    display:flex;
+   margin-bottom: 1.6rem;
 }
 
 #controls{
@@ -41,5 +52,13 @@ button{
    align-items: center;
    justify-content: center;
    border-radius: 9999px;
-   gap:1rem;
+   gap:3.2rem;
+   width: clamp(10rem, 10rem + 30vw, 22.8rem); /*uso flexivel do botao*/
+   height:clamp(8rem, 5rem + 10vw, 10.8rem);
+}
+
+footer{
+   justify-self: end;
+   align-self: end;
+   padding:0 4rem 3.2rem 0;
 }
