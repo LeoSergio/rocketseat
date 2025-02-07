@@ -3,3 +3,39 @@
    padding:0;
    box-sizing: border-box; 
 }
+:root{
+   --bg-body: #121214;
+   --base-color:194;
+   --bg-primary-light: hsla(var(--base-color),100%, 63%, 0.13);
+   --primary-color:hsl(var(--base-color),100%, 63%);
+   --font-body-color:white;
+
+   font-size: 62.5%; /*1rem = 10px*/
+}
+body{
+   background-color: var(--bg-body);
+   color:var(--font-body-color);
+   /*font Roboto*/
+}
+
+button{
+   background-color: transparent;
+   border:none;
+   cursor:pointer;
+}
+.hide{
+   display:none;
+}
+.play img, .pause img, .sound-on img{
+   background-color: var(--primary-color);
+}
+#timer{
+   font-size: 8.8rem;
+   font-weight: bold;
+   display:flex;
+}
+
+#controls{
+   background-color: var(--bg-primary-light);
+}
+

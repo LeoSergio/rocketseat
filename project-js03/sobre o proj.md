@@ -2,7 +2,7 @@
 
 **Temporizador Pomodoro para estudo**
 
-![Imagem do aplicativo](./images/Projeto%20-%20FocusTime.png)
+![Imagem do aplicativo](./images/Projeto%20-%20FocusTime.png){width=300}
 
 ## ✨ Funcionalidades
 
