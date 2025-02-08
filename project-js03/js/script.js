@@ -4,16 +4,37 @@ const buttonPlay = document.querySelector('.play');
 const buttonPause = document.querySelector('.pause');
 const buttonStop = document.querySelector('.stop');
 const buttonSet = document.querySelector('.set');
+const buttonSoundOff = document.querySelector('.sound-off');
+const buttonSoundOn = document.querySelector('.sound-on');
+let minutes;
+const minutesDisplay = document.querySelector('.minutes');
+const secondsDisplay = document.querySelector('.seconds');
 
 //eventos direcionadas
 //programação imperativa
 //callback
+function countdown(){
+    setTimeout(function(){
+        let seconds = Number(secondsDisplay.textContent);
+    
+        if (seconds <= 0){
+            seconds =60;
+        }
+        secondsDisplay.textContent = seconds -1;
+    
+        countdown();
+    },1000);
+
+}
 
 buttonPlay.addEventListener('click', function(){
     buttonPlay.classList.add('hide');
     buttonPause.classList.remove('hide');
     buttonSet.classList.add('hide');
     buttonStop.classList.remove('hide');
+
+    countdown();
+
 });
 
 buttonPause.addEventListener('click', function(){
@@ -27,3 +48,19 @@ buttonStop.addEventListener('click', function(){
     buttonSet.classList.remove('hide');
     buttonStop.classList.add('hide');
 })
+
+buttonSoundOn.addEventListener('click', function(){
+    buttonSoundOn.classList.add('hide');
+    buttonSoundOff.classList.remove('hide');
+})
+
+buttonSoundOff.addEventListener('click', function(){
+    buttonSoundOn.classList.remove('hide');
+    buttonSoundOff.classList.add('hide');
+})
+
+buttonSet.addEventListener('click',function(){
+    minutes = prompt('Digite os minutos!');
+    minutesDisplay.textContent = minutes;
+})
+
