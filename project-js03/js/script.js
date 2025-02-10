@@ -10,6 +10,17 @@ let minutes;
 const minutesDisplay = document.querySelector('.minutes');
 const secondsDisplay = document.querySelector('.seconds');
 
+function resetControls(){
+    buttonPlay.classList.remove('hide');
+    buttonPause.classList.add('hide');
+    buttonSet.classList.remove('hide');
+    buttonStop.classList.add('hide');
+}
+
+function updateTimerDisplay(minutes,seconds){
+    minutesDisplay.textContent = String(minutes).padStart(2,"0");
+    secondsDisplay.textContent = String(seconds).padStart(2,"0");
+}
 //eventos direcionadas
 //programação imperativa
 //callback
@@ -18,27 +29,21 @@ function countdown(){
         let seconds = Number(secondsDisplay.textContent);
         let minutes = Number(minutesDisplay.textContent);
         
-        secondsDisplay.textContent = String(seconds - 1).padStart(2,"0");
+        updateTimerDisplay(minutes,0);
 
         if (minutes <=0){
-            buttonPlay.classList.remove('hide');
-            buttonPause.classList.add('hide');
-            buttonSet.classList.remove('hide');
-            buttonStop.classList.add('hide');
+            resetControls();        
             return
         }
         
         if (seconds <= 0){
             seconds =2;
-
-            minutesDisplay.textContent = String(minutes - 1).padStart(2,"0");
+            --minutes; //decrementando os minutos
         }
 
-        secondsDisplay.textContent = String(seconds - 1).padStart(2,"0");
+        updateTimerDisplay(minutes, String(seconds-1));
         
         
-        
-
         countdown();
     },1000);
 
@@ -60,10 +65,7 @@ buttonPause.addEventListener('click', function(){
 });
 
 buttonStop.addEventListener('click', function(){
-    buttonPlay.classList.remove('hide');
-    buttonPause.classList.add('hide');
-    buttonSet.classList.remove('hide');
-    buttonStop.classList.add('hide');
+    resetControls();
 })
 
 buttonSoundOn.addEventListener('click', function(){
@@ -78,6 +80,6 @@ buttonSoundOff.addEventListener('click', function(){
 
 buttonSet.addEventListener('click',function(){
     minutes = prompt('Digite os minutos!');
-    minutesDisplay.textContent = minutes;
-})
+    updateTimerDisplay(minutes, 0);
+});
 
