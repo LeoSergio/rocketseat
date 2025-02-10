@@ -16,12 +16,29 @@ const secondsDisplay = document.querySelector('.seconds');
 function countdown(){
     setTimeout(function(){
         let seconds = Number(secondsDisplay.textContent);
-    
-        if (seconds <= 0){
-            seconds =60;
+        let minutes = Number(minutesDisplay.textContent);
+        
+        secondsDisplay.textContent = String(seconds - 1).padStart(2,"0");
+
+        if (minutes <=0){
+            buttonPlay.classList.remove('hide');
+            buttonPause.classList.add('hide');
+            buttonSet.classList.remove('hide');
+            buttonStop.classList.add('hide');
+            return
         }
-        secondsDisplay.textContent = seconds -1;
-    
+        
+        if (seconds <= 0){
+            seconds =2;
+
+            minutesDisplay.textContent = String(minutes - 1).padStart(2,"0");
+        }
+
+        secondsDisplay.textContent = String(seconds - 1).padStart(2,"0");
+        
+        
+        
+
         countdown();
     },1000);
 
