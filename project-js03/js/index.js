@@ -1,5 +1,5 @@
 //
-import "./controls"
+import resetControls from "./controls"
 import "./timer"
 const buttonPlay = document.querySelector('.play');
 const buttonPause = document.querySelector('.pause');
