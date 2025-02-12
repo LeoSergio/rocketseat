@@ -35,7 +35,6 @@ export default function Controls({
         }
 
     return{
-        resetControls,
         play,
         pause,
         reset,
