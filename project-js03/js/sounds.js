@@ -3,7 +3,7 @@ export default function(){
     const kitchenTimer = new Audio("./audios/cuckoo-9-94258.mp3");
     const bgAudio = new Audio("./audios/Pufino - Sentimental (freetouse.com).mp3");
 
-    bgAudio.loop
+    bgAudio.loop = true;
 
     function pressButton(){
         buttonPressAudio.play();
