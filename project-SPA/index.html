@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,13 +7,20 @@
 </head>
 <body>
     <nav>
-        <a href="/">Home</a>
-        <a href="/project-SPA/about.html">Sobre</a>
-        <a href="/project-SPA/contato.html">Contact</a>
-        <a href="/project-SPA/404.html">404</a>
+        <a href="/" onclick="route()">Home</a>
+        <a href="about.html" onclick="route()">Sobre</a>
+        <a href="contato.html" onclick="route()">Contact</a>
+        <a href="404.html" onclick="route()">404</a>
         
     </nav>
 
-    div
+    <div id="app">
+        <script>
+            function route(event){
+                event = event || window.event
+                event.preventDefault() // função para evitar o evento padrão do link
+            }
+        </script>
+    </div>
 </body>
 </html>
