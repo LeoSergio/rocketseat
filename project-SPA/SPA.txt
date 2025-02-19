@@ -1,0 +1,3 @@
+Single Page Aplication
+essa parte do estudo, é uma parte redirecionada a 
+rotas da aplicação e também POO
