@@ -16,9 +16,26 @@
 
     <div id="app">
         <script>
+            //mapeamento de rotas 
+            const routes ={
+                "/": "/pages/home.html",
+                "/about": "/pages/about.html",
+                "/contato": "/pages/contato.html",  
+                404: "/pages/404.html",
+            }
+
+            //console.log(routes["/about"]) forma de chamar o objeto nomeado
             function route(event){
                 event = event || window.event
                 event.preventDefault() // função para evitar o evento padrão do link
+
+                window.history.pushState({}, "", event.target.href)
+                handle()
+            }
+
+            function handle(){
+                const pathname = window.location.pathname
+
             }
         </script>
     </div>
