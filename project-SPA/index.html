@@ -14,7 +14,7 @@
         
     </nav>
 
-    <div id="app">
+    <div id="app"></div>
         <script>
             //mapeamento de rotas 
             const routes ={
@@ -35,9 +35,16 @@
 
             function handle(){
                 const pathname = window.location.pathname
+                const route = routes[pathname] || routes[404]
+
+                fetch(route)
+                .then(data => data.text())
+                .then(html => console.log(html))
+
+                console.log(route)
 
             }
         </script>
-    </div>
+    
 </body>
 </html>

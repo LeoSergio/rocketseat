@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orçamento de Eventos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Orçamento de Eventos</h1>
+    <form id="orcamentoForm">
+        <label>Tipo de Evento:</label>
+        <select id="tipoEvento">
+            <option value="musica">Música ao Vivo</option>
+            <option value="casamento">Casamento</option>
+            <option value="festa">Festa</option>
+            <option value="recepcao">Recepção</option>
+        </select>
+
+        <label>Data do Evento:</label>
+        <input type="date" id="dataEvento" required>
+
+        <label>Duração (horas):</label>
+        <input type="number" id="duracao" min="1" max="12" value="2">
+
+        <label>Número de Convidados:</label>
+        <input type="number" id="convidados" min="10" max="500" value="100">
+
+        <button type="button" onclick="calcularOrcamento()">Calcular Orçamento</button>
+    </form>
+
+    <h2>Orçamento Estimado: <span id="total">R$ 0,00</span></h2>
+
+    <button id="whatsappButton" style="display: none;" onclick="enviarWhatsApp()">Solicitar pelo WhatsApp</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
