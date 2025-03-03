@@ -4,8 +4,8 @@ function calcularOrcamento() {
     const duracao = parseInt(document.getElementById("duracao").value);
     const convidados = parseInt(document.getElementById("convidados").value);
 
-    if (!dataEvento <= 2024) {
-        alert("Por favor, escolha uma data valida para o evento.");
+    if (!dataEvento || new Date(dataEvento) < new Date()) {
+        alert("Por favor, escolha uma data válida para o evento.");
         return;
     }
 
